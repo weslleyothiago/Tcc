@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* src/styles.css ou src/styles.scss */
+@font-face {
+    font-family: 'Funky Bubble';
+    src: url('../fonts/FankyBubbleGraffiti-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .font-funky-bubble {
+    font-family: 'Funky Bubble', sans-serif;
+  }
+  

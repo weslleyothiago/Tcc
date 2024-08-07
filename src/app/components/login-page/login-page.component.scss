@@ -1,0 +1,17 @@
+    /* Define a animação de brilho */
+    @keyframes shine {
+        0% {
+          color: #fbbf24; /* Cor amarela */
+        }
+        50% {
+          color: #f97316; /* Cor laranja */
+        }
+        100% {
+          color: #fbbf24; /* Cor amarela */
+        }
+      }
+  
+      /* Aplica a animação ao texto do header */
+      .shine-animation {
+        animation: shine 2s infinite;
+      }

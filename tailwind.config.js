@@ -4,8 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'funky-bubble': ['"Funky Bubble"', 'sans-serif']
+      }
+    }
   },
   plugins: [],
 }
-
