@@ -1,0 +1,46 @@
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" *ngIf="estaAberto">
+  <div class="bg-black rounded-lg shadow-lg p-6 max-w-lg w-full border-2 border-yellow-500">
+    <header>
+      <button (click)="fechaModal()" class="text-white">Sair</button>
+    </header>
+    <h2 class="text-2xl font-semibold text-white mb-4">Criar sua conta</h2>
+    <!-- Formulário de Registro -->
+    <form class="space-y-4">
+      <div class="relative">
+        <input type="text" id="email" class="peer mt-1 block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 placeholder-transparent" placeholder=" " />
+        <label for="email" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Email</label>
+      </div>
+      <div class="relative">
+        <input type="password" id="senha" class="peer mt-1 block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 placeholder-transparent" placeholder=" " />
+        <label for="senha" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Senha</label>
+      </div>
+      <!-- Campos de Data -->
+      <div class="flex space-x-4">
+        <div class="relative w-1/3">
+          <select id="dia" class="peer block w-full px-3 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            <option value="" disabled selected></option>
+            <option *ngFor="let dia of dias" [value]="dia">{{ dia }}</option>
+          </select>
+          <label for="dia" class="absolute left-3 top-2 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Dia</label>
+        </div>
+        <div class="relative w-1/3">
+          <select id="mes" class="peer block w-full px-3 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            <option value="" disabled selected></option>
+            <option *ngFor="let mes of meses" [value]="mes.value">{{ mes.nome }}</option>
+          </select>
+          <label for="mes" class="absolute left-3 top-2 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Mês</label>
+        </div>
+        <div class="relative w-1/3">
+          <select id="ano" class="peer block w-full px-3 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500">
+            <option value="" disabled selected></option>
+            <option *ngFor="let ano of anos" [value]="ano">{{ ano }}</option>
+          </select>
+          <label for="ano" class="absolute left-3 top-2 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Ano</label>
+        </div>
+      </div>
+      <button type="submit" class="w-full py-3 px-4 bg-black border hover:border-yellow-500 rounded-full hover:text-yellow-500 text-white font-semibold transition duration-150">
+        Registrar
+      </button>
+    </form>
+  </div>
+</div>

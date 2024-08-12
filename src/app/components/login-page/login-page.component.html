@@ -1,33 +1,44 @@
 <div class="h-screen flex flex-col justify-between bg-black">
-<header class="text-5xl text-center py-4 fixed w-full top-0 left-0 z-10 font-funky-bubble shine-animation">
-  FACEDUP
-</header>
-  <div class="flex flex-grow">
+  <header class="text-5xl text-center py-4 fixed w-full top-0 left-0 z-10 font-funky-bubble shine-animation text-white">
+    FACEDUP
+  </header>
+  <div class="flex flex-grow pt-24">
     <aside class="w-1/2 p-6 flex items-center justify-center">
       <h1 class="text-9xl font-funky-bubble text-center text-yellow-400">CEDUP EM TEMPO REAL!</h1>
     </aside>
     <main class="w-1/2 p-6 flex items-center justify-center">
-      <form>
-        <label for="email">Email:</label>
-        <input type="text" id="email" class="mb-2">
-        <br>
-        <label for="senha">Senha:</label>
-        <input type="password" id="senha" class="mb-2">
-        <br>
-        <button>Vamos lá</button>
+      <form class="space-y-8 w-full max-w-sm">
+        <div class="relative">
+          <input type="text" id="email" class="peer mt-1 block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 placeholder-transparent" placeholder=" " />
+          <label for="email" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Email</label>
+        </div>
+        <div class="relative">
+          <input type="password" id="senha" class="peer mt-1 block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 placeholder-transparent" placeholder=" " />
+          <label for="senha" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">Senha</label>
+        </div>
+        <button type="submit" class="w-full py-2 px-4 bg-black border hover:border-yellow-500 rounded-full hover:text-yellow-500 text-white font-semibold transition duration-150">
+          Entrar
+        </button>
+        <button type="button" (click)="abreModalRegistrar()" class="w-full py-2 px-4 bg-yellow-500 hover:bg-yellow-600 rounded-full text-white font-semibold transition duration-150">
+          Registrar
+        </button>
+        <app-register-modal
+          [estaAberto]="modalEstaAberto"
+          (fecha)="fechaModalRegistrar()">
+        </app-register-modal>
       </form>
     </main>
   </div>
   <footer class="py-4">
     <div class="flex justify-center">
       <div class="flex space-x-7">
-        <a href="https://www.instagram.com/weslleyothiago/">
+        <a href="https://www.instagram.com/weslleyothiago/" class="hover:scale-110 transform transition duration-200">
           <img src="/instagram.png" alt="Instagram" class="w-8 h-8">
         </a>
-        <a href="https://github.com/weslleyothiago">
+        <a href="https://github.com/weslleyothiago" class="hover:scale-110 transform transition duration-200">
           <img src="/github.png" alt="GitHub" class="w-8 h-8">
         </a>
-        <a href="https://www.linkedin.com/in/weslleyothiago/">
+        <a href="https://www.linkedin.com/in/weslleyothiago/" class="hover:scale-110 transform transition duration-200">
           <img src="/linkedin.png" alt="LinkedIn" class="w-8 h-8">
         </a>
       </div>

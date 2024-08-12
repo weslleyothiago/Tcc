@@ -15,3 +15,9 @@
       .shine-animation {
         animation: shine 2s infinite;
       }
+
+      /* Estilos para o label ao focar o input */
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  transform: scale(0.9) translateY(-0.75rem); /* Ajusta a posição do label ao focar ou com texto */
+}
