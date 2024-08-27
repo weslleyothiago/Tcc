@@ -1,0 +1,63 @@
+<div class="h-screen flex flex-col justify-between bg-black">
+  <!-- Cabeçalho -->
+  <header class="text-5xl text-center py-6 fixed w-full top-0 left-0 z-10 font-funky-bubble shine-animation text-white shadow-md">
+    FACEDUP
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="flex flex-grow pt-24 px-6 md:px-12">
+    <aside class="w-full md:w-1/2 flex items-center justify-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-funky-bubble text-center text-yellow-400">
+        CEDUP EM TEMPO REAL!
+      </h1>
+    </aside>
+    <section class="w-full md:w-1/2 flex items-center justify-center">
+      <form class="space-y-8 w-full max-w-sm">
+        <h2 class="text-center text-white mb-4">CONECTE-SE AO MELHOR DA ESCOLA!</h2>
+        <!-- Campo de Email -->
+        <div class="relative">
+          <input type="text" id="email" class="peer block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" placeholder=" " aria-label="Email" />
+          <label for="email" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">
+            Email
+          </label>
+        </div>
+
+        <!-- Campo de Senha -->
+        <div class="relative">
+          <input type="password" id="senha" class="peer block w-full px-3 py-4 bg-black border border-gray-700 rounded-md text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500" placeholder=" " aria-label="Senha" />
+          <label for="senha" class="absolute left-3 top-3 text-gray-500 duration-300 transform scale-90 -translate-y-3 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-90 peer-focus:-translate-y-3 peer-focus:text-yellow-500">
+            Senha
+          </label>
+        </div>
+
+        <!-- Botões -->
+        <div class="space-y-4">
+          <button type="submit" class="w-full py-3 px-4 bg-black border border-transparent hover:border-yellow-500 rounded-full hover:text-yellow-500 text-white font-semibold transition duration-150">
+            Entrar
+          </button>
+          <button type="button" (click)="abreModalRegistrar()" class="w-full py-3 px-4 bg-yellow-500 hover:bg-yellow-600 rounded-full text-white font-semibold transition duration-150">
+            Registrar
+          </button>
+        </div>
+      </form>
+      <app-register-modal [estaAberto]="modalEstaAberto" (fecha)="fechaModalRegistrar()"></app-register-modal>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="py-6 bg-black">
+    <div class="flex justify-center">
+      <div class="flex space-x-8">
+        <a href="https://www.instagram.com/weslleyothiago/" aria-label="Instagram" class="transition-transform transform hover:scale-110">
+          <img src="/instagram.png" alt="Instagram logo" class="w-8 h-8" />
+        </a>
+        <a href="https://github.com/weslleyothiago" aria-label="GitHub" class="transition-transform transform hover:scale-110">
+          <img src="/github.png" alt="GitHub logo" class="w-8 h-8" />
+        </a>
+        <a href="https://www.linkedin.com/in/weslleyothiago/" aria-label="LinkedIn" class="transition-transform transform hover:scale-110">
+          <img src="/linkedin.png" alt="LinkedIn logo" class="w-8 h-8" />
+        </a>
+      </div>
+    </div>
+  </footer>
+</div>

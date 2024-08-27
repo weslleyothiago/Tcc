@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Funky Bubble';
+  src: url('../fonts/FankyBubbleGraffiti-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-funky-bubble {
+  font-family: 'Funky Bubble', sans-serif;
+}
