@@ -1,4 +1,4 @@
-<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" [ngClass]="{'backdrop-blur' : estaAberto == true}" *ngIf="estaAberto">
+<div class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50" [ngClass]="{'backdrop-blur-sm': estaAberto}" *ngIf="estaAberto">
   <div class="bg-black rounded-lg shadow-lg p-8 max-w-xl w-full border border-yellow-500 relative">
     <!-- Cabeçalho do Modal -->
     <header class="flex items-center mb-8">
@@ -64,7 +64,7 @@
               (change)="atualizarDias()"
               name="mes"
               id="mes"
-              class="peer block w-full px-4 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+              class="peer block w-full px-4 py-5 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               aria-label="Mês"
             >
               <option value="" disabled></option>
@@ -82,7 +82,7 @@
             <select
               name="dia"
               id="dia"
-              class="peer block w-full px-4 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+              class="peer block w-full px-4 py-5 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               aria-label="Dia"
             >
               <option value="" disabled></option>
@@ -102,7 +102,7 @@
               (change)="atualizarDias()"
               name="ano"
               id="ano"
-              class="peer block w-full px-4 py-3 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
+              class="peer block w-full px-4 py-5 bg-black border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               aria-label="Ano"
             >
               <option value="" disabled></option>
