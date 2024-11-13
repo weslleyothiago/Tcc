@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/weslleyothiago/backend-tcc.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/weslleyothiago/frontend-tcc.git
